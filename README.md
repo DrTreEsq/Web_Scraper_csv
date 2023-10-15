@@ -9,7 +9,9 @@
 ###### removing nasa project and exploit spider to change directions with more compatable data
 * $ scrapy startproject gov
 * $ scrapy genspider constitution constitutioncenter.org
-* $ scrapy shell https://constitutioncenter.org/the-constitution/full-text.html
+* $ scrapy shell 
+* $ fetch('https://constitutioncenter.org/the-constitution/full-text')
+* 
 
 
 

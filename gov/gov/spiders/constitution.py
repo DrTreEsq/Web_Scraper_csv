@@ -21,7 +21,7 @@ class ConstitutionSpider(scrapy.Spider):
             try:
                 # This is one way of doing that
                 for text in row.xpath('td//text()'):
-                    if text.extract().startswith('nasa'):
+                    if text.extract().startswith('constitution'):
                         nasa_list.append(text.extract())
                 print(f"exploit id: {exploit_id} -> {nasa_list}")
                 append_sql_file(exploit_id, nasa_list)
