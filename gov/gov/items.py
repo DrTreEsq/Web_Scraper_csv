@@ -6,7 +6,7 @@
 import scrapy
 
 
-class NasaItem(scrapy.Item):
+class GovItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
     pass

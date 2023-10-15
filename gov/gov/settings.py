@@ -1,4 +1,4 @@
-# Scrapy settings for nasa project
+# Scrapy settings for gov project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -7,14 +7,14 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = "nasa"
+BOT_NAME = "gov"
 
-SPIDER_MODULES = ["nasa.spiders"]
-NEWSPIDER_MODULE = "nasa.spiders"
+SPIDER_MODULES = ["gov.spiders"]
+NEWSPIDER_MODULE = "gov.spiders"
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = "nasa (+http://www.yourdomain.com)"
+#USER_AGENT = "gov (+http://www.yourdomain.com)"
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
@@ -45,13 +45,13 @@ ROBOTSTXT_OBEY = True
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    "nasa.middlewares.NasaSpiderMiddleware": 543,
+#    "gov.middlewares.GovSpiderMiddleware": 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    "nasa.middlewares.NasaDownloaderMiddleware": 543,
+#    "gov.middlewares.GovDownloaderMiddleware": 543,
 #}
 
 # Enable or disable extensions
@@ -63,7 +63,7 @@ ROBOTSTXT_OBEY = True
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 #ITEM_PIPELINES = {
-#    "nasa.pipelines.NasaPipeline": 300,
+#    "gov.pipelines.GovPipeline": 300,
 #}
 
 # Enable and configure the AutoThrottle extension (disabled by default)

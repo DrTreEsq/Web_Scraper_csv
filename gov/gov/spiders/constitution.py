@@ -2,24 +2,11 @@ import scrapy
 import os
 from os.path import dirname
 
-# this exploit syntax is SPECIFIC to the CVEs in cve.mitre.orh
-# need to use source syntax for the html from nasa or whatever website using
-# was the sql file/dir created with syntax or manually first in the terminal/GUI?
 
-current_dir = os.path.dirname(__file__)
-url = os.path.join(current_dir, 'source.html')
-top_dir = dirname(dirname(dirname(current_dir)))
-sql_file = os.path.join(top_dir, 'sql_files/populate.sql')e
-
-
-class ExploitSpider(scrapy.Spider):
-    name = "exploit"
-    allowed_domains = ["nasa.gov"]
-    start_urls = ["https://nasa.gov/source.html"]
-    # Starting with actual URLs is fine
-    # start_urls = ['http://cve.mitre.org/data/refs/refmap/source-EXPLOIT-DB.html']
-    # But you can use files as well!
-    # start_urls = [f"file://{url}"]
+class ConstitutionSpider(scrapy.Spider):
+    name = "constitution"
+    allowed_domains = ["constitutioncenter.org"]
+    start_urls = ["https://constitutioncenter.org/the-constitution/full-text"]
 
     def parse(self, response):
         table = None
@@ -43,8 +30,15 @@ class ExploitSpider(scrapy.Spider):
             count += 1
             
 
-def append_sql_file(exploit_id, nasas):
-    line = f"INSERT INTO exploit(exploit_id, nasas) VALUES ('{exploit_id}', '{str(nasas)}');\n"
+
+
+
+'''
+
+sql - next
+
+def append_sql_file(amendment, nasas):
+    line = f"INSERT INTO exploit(exploit_id, nasas) VALUES ('{amendment}', '{str(nasas)}');\n"
     if not os.path.exists(sql_file):
         with open(sql_file, 'w') as _f:
             _f.write(line)
@@ -53,7 +47,26 @@ def append_sql_file(exploit_id, nasas):
         _f.write(line)
 
 
-'''
+# this exploit syntax is SPECIFIC to the CVEs in cve.mitre.orh
+# need to use source syntax for the html from nasa or whatever website using
+# was the sql file/dir created with syntax or manually first in the terminal/GUI?
+
+current_dir = os.path.dirname(__file__)
+url = os.path.join(current_dir, 'source.html')
+top_dir = dirname(dirname(dirname(current_dir)))
+sql_file = os.path.join(top_dir, 'sql_files/populate.sql')e
+
+
+class ExploitSpider(scrapy.Spider):
+    name = "exploit"
+    allowed_domains = ["nasa.gov"]
+    start_urls = ["https://nasa.gov/source.html"]
+    # Starting with actual URLs is fine
+    # start_urls = ['http://cve.mitre.org/data/refs/refmap/source-EXPLOIT-DB.html']
+    # But you can use files as well!
+    # start_urls = [f"file://{url}"]
+
+
 1. pip install scrapy
 2. pip install -r requirements.txt (touch requirements.txt first)
 # ERROR: Could not open requirements file: [Errno 2] No such file or directory: 'requirements.txt'
