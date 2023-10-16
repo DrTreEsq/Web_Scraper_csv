@@ -38,6 +38,10 @@ len(articles)
 ###### in the spider.py (constitution.py)
 
 
+3. Saving the parsed data to SQL, or JSON
+
+
+
 OTHER
 ###### text? - not helpful for this site/data
 * $ response.css('div.article::text').get()
