@@ -32,10 +32,8 @@ class ConstitutionSpider(scrapy.Spider):
 
 
 
-
 '''
-
-sql - next
+Azure/SQL - next
 
 def append_sql_file(amendment, nasas):
     line = f"INSERT INTO exploit(exploit_id, nasas) VALUES ('{amendment}', '{str(nasas)}');\n"
@@ -47,14 +45,10 @@ def append_sql_file(amendment, nasas):
         _f.write(line)
 
 
-# this exploit syntax is SPECIFIC to the CVEs in cve.mitre.orh
-# need to use source syntax for the html from nasa or whatever website using
-# was the sql file/dir created with syntax or manually first in the terminal/GUI?
-
 current_dir = os.path.dirname(__file__)
 url = os.path.join(current_dir, 'source.html')
 top_dir = dirname(dirname(dirname(current_dir)))
-sql_file = os.path.join(top_dir, 'sql_files/populate.sql')e
+sql_file = os.path.join(top_dir, 'sql_files/populate.sql')
 
 
 class ExploitSpider(scrapy.Spider):
@@ -67,21 +61,13 @@ class ExploitSpider(scrapy.Spider):
     # start_urls = [f"file://{url}"]
 
 
-1. pip install scrapy
-2. pip install -r requirements.txt (touch requirements.txt first)
-# ERROR: Could not open requirements file: [Errno 2] No such file or directory: 'requirements.txt'
-3. scrapy startproject nasa
-# cd nasa
-4. scrapy genspider exploit nasa.gov
-5. scrapy crawl exploit - GETTING LINE 26 ERROR: AttributeError: 'NoneType' object has no attribute 'xpath'
-6. scrapy runspider scrapy.py
-
-
 # This captures 1 CVE only, but you may have many
                 exploit_id = row.xpath('td//text()')[0].extract()
                 nasa_id = row.xpath('td//text()')[2].extract()
                 print(f"exploit id: {exploit_id} -> {nasa_id}")
                 
                 
-# cat > scrapy.py <<EOF
+# this exploit syntax is SPECIFIC to the CVEs in cve.mitre.orh
+# need to use source syntax for the html from nasa or whatever website using
+# was the sql file/dir created with syntax or manually first in the terminal/GUI?             
 '''
