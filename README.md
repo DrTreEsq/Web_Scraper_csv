@@ -8,6 +8,7 @@
 
 ###### removing nasa project and exploit spider to change directions with more compatable data
 ###### https://www.youtube.com/watch?v=s4jtkzHhLzY&t=258s
+###### https://github.com/jhnwr/whiskyspider/tree/master
 
 1. TERMINAL - parse in scrapy shell
 * pip install scrapy, pip install -r requirements.txt (touch requirements.txt first)
