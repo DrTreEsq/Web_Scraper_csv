@@ -11,7 +11,7 @@
 
 1. TERMINAL - parse in scrapy shell
 * pip install scrapy, pip install -r requirements.txt (touch requirements.txt first)
-# ERROR: Could not open requirements file: [Errno 2] No such file or directory: 'requirements.txt'
+###### ERROR: Could not open requirements file: [Errno 2] No such file or directory: 'requirements.txt'
 * $ scrapy startproject gov
 * $ cd gov
 * $ scrapy genspider constitution constitutioncenter.org
