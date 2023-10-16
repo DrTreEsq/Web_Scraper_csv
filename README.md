@@ -40,6 +40,8 @@ len(articles)
 
 
 3. Saving the parsed data to SQL, or JSON
+* $ scrapy crawl constitution
+* $ scrapy crawl constitution -0 whisky.sql
 
 
 
