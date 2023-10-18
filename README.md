@@ -35,8 +35,9 @@ len(articles)
 
 
 
-2. Python Script
+2. Python Script - CREATING SCRAPY SPIDER & FOMRAT TO SAVE DATA TO
 ###### in the spider.py (constitution.py)
+
 
 
 3. Saving the parsed data to SQL, or JSON
