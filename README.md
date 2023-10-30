@@ -40,11 +40,12 @@ len(articles)
 
 
 
-3. Saving the parsed data to SQL, or JSON
+3. Saving the parsed data to SQL, or JSON‼️
 * $ scrapy crawl constitution
-* $ scrapy crawl constitution -0 whisky.sql
+* $ scrapy crawl constitution -o articles.csv
+* $ scrapy crawl constitution -o articles.json
 
-
+# crawl gets syntax error - SyntaxError: invalid syntax - fixed
 
 OTHER
 ###### text? - not helpful for this site/data

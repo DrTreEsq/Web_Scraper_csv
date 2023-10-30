@@ -1,6 +1,6 @@
 import scrapy
 # INSTEAD OF XPATH - 
-from whiskyscraper.items import WhiskyscraperItem
+# from whiskyscraper.items import WhiskyscraperItem
 from scrapy.loader import ItemLoader
 
 #THIS IS FOR XPATH
