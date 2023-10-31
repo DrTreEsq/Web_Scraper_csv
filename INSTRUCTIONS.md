@@ -209,3 +209,10 @@ The Github Action can execute a SQL file and run it against the remote database.
 There is no need to use Github Actions or Azure to make this all work. At the end of the scraping, the data can be pushed over to anywhere, like a CSV file. The scraping can also be done using Jenkins or any other CI/CD platform.
 
 Finally, if you run the scraping code locally and the SQL file gets generated, you can use SQLite to populate the database with the newly generated data.
+
+
+
+###### resources below
+stack overflow
+* https://stackoverflow.com/questions/54337540/cannot-run-scrapy-crawl-quotes
+* https://stackoverflow.com/questions/42351611/python-scrapy-error-running-scrapy-crawl-with-more-than-one-spider-is-no-long
