@@ -211,10 +211,10 @@ There is no need to use Github Actions or Azure to make this all work. At the en
 Finally, if you run the scraping code locally and the SQL file gets generated, you can use SQLite to populate the database with the newly generated data.
 
 
-
 ###### resources below
 stack overflow
 * https://stackoverflow.com/questions/54337540/cannot-run-scrapy-crawl-quotes
 * https://stackoverflow.com/questions/42351611/python-scrapy-error-running-scrapy-crawl-with-more-than-one-spider-is-no-long
 other
+* https://www.youtube.com/watch?v=s4jtkzHhLzY&t=258s
 * https://www.linkedin.com/advice/0/how-do-you-decide-between-csv-json-xml-data-analysis#:~:text=Generally%20speaking%2C%20CSV%20should%20be,with%20web%20applications%20and%20APIs.
